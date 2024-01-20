@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1440px;
+    height: fit-content;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    
+    padding-top: 20px;
+    
+   
+}
+
+.logotype {
+    height: 102px;
+    width: 400px;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+}
+
+.phone-number{
+    color: black;
+    font-size: 24px;
+}
+
+.timetable {
+    color: gray;
+    font-size: 22px;
+}
+
+.adress {
+    color: gray;
+    font-size: 22px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    width: 1440px;
+    height: 75px;
+    justify-content: center;
+    color: black;
+}
+
+.line {
+    width: 1340px;
+    height: fit-content;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.wrapper-coop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: left;
+    width: 1180px;
+    height: fit-content;
+}
+
+.group-vac {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 600px;
+    margin-left: 100px;
+}
+
+.des{
+    margin-right: 90px;
+    margin-left: 9px;
+}
+
+.designer {
+    width: 56px;
+    height: 56px;
+}
+
+.arch {
+    margin-right: 90px;
+    /* padding-left: 25px; */
+}
+
+.architect {
+    width: 68px;
+    height: 68px;
+}
+
+.arti {
+    margin-right: 90px;
+}
+
+.painter {
+    width: 72px;
+    height: 72px;
+}
+
+.vac-text{
+    font-size: 32px;
+}
+
+.mechan {
+    margin-right: 90px;
+}
+
+.mechanic {
+    width: 72px;
+    height: 72px;
+}
+
+.text_for_google_form {
+    width: 1000px;
+    height: fit-content;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.invisible_block {
+    display: flex;
+    font-size: 24px;
+    margin-bottom: 50px;
+    margin-left: 250px;
+
+}
+
+#move_text_1 {
+    display: none;
+    
+}
+#move_text_2 {
+    display: none;
+    
+}
+#move_text_3 {
+    display: none;
+    
+}
+#move_text_4 {
+    display: none;
+    
+}
+
+button {
+    border: 0px;
+    background-color: white;
+    font-size: 32px;
+
+}
+
+.buttom_arrow:hover {
+    color: #37a6de;
+}
