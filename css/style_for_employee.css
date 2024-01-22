@@ -176,3 +176,8 @@ button {
 .buttom_arrow:hover {
     color: #37a6de;
 }
+
+.google_form_wrapper {
+    width: 1000px;
+    height: 800px;
+}
