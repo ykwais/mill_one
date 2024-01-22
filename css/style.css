@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1440px;
+    width: 1340px;
     height: fit-content;
     align-items: center;
     margin-bottom: 50px;
@@ -113,10 +113,11 @@ body {
 }
 
 .ways {
-    align-self: flex-start;
+    width: 1000px;
+    height: fit-content;
     font-size: 32px;
     padding-left: 140px;
-    margin-bottom: 45px;
+    margin-bottom: 90px;
 }
 
 .wrapper-pic-ways {
@@ -168,74 +169,59 @@ body {
 
 
 .text-way {
-    
     font-size: 24px;
-    
-    
-
 }
 
-.wrapper-coop {
+.what_are_doing{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.wrapper_categories {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    width: 1350px;
+    height: fit-content;
+    border: 1px solid black;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
-    width: 1180px;
-    height: fit-content;
 }
 
-.group-vac {
+.wrapper_buttons_for_category {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
+    border: 1px solid black;
     margin-bottom: 40px;
-
+    width: 1350px;
 }
 
-.des{
-    margin-right: 90px;
+.wrapper_button {
+    width: 200px;
+    height: fit-content;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.designer {
-    width: 56px;
-    height: 56px;
+button {
+    border: 0px;
+    background-color: white;
+    border-radius: 15px;
 }
 
-.arch {
-    margin-right: 90px;
-    padding-left: 25px;
+button:hover {
+    background-color: #37a6de;
+    color: white;
 }
 
-.architect {
-    width: 68px;
-    height: 68px;
+button:active {
+    background-color: white;
+    color: black;
 }
-
-.arti {
-    margin-right: 90px;
-}
-
-.painter {
-    width: 72px;
-    height: 72px;
-}
-
-.vac-text{
-    font-size: 32px;
-}
-
-.mechan {
-    margin-right: 90px;
-
-}
-
-.mechanic {
-    width: 0px;
-    height: 0px;
-}
-
-
 
