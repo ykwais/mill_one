@@ -428,40 +428,58 @@
       
         <div class="group-way">
           
-            <div class="pic-way" style="background-image: url(pic/decor_1.jpg);"></div>
-          
-          
+          <div class="pic-way" style="background-image: url(pic/decor_1.jpg);" onclick="open_img('pic/decor_1.jpg')"></div>
           <div class="text-way">Изготовление декораций</div>
         </div>
   
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/penza-1.jpg);"></div>
+          <div class="pic-way" style="background-image: url(pic/penza-1.jpg);" onclick="open_img('pic/penza-1.jpg')"></div>
           <div class="text-way">Cтенды для выставок</div>
         </div>
   
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/arki.-foto-15.jpg);"></div>
+          <div class="pic-way" style="background-image: url(pic/arki.-foto-15.jpg);" onclick="open_img('pic/arki.-foto-15.jpg')"></div>
           <div class="text-way">Наружная реклама</div>
         </div>
   
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/dekor.jpg);"></div>
+          <div class="pic-way" style="background-image: url(pic/dekor.jpg);" onclick="open_img('pic/dekor.jpg')"></div>
           <div class="text-way">Декоративные элементы для интерьера</div>
         </div>
   
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/frezernye-raboty.jpg);"></div>
+          <div class="pic-way" style="background-image: url(pic/frezernye-raboty.jpg);" onclick="open_img('pic/frezernye-raboty.jpg')"></div>
           <div class="text-way">Фрезеровка и гравировка на ЧПУ станке</div>
         </div>
   
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/content_izgotovlenie_metallokonstrukczij_1.jpg);"></div>
+          <div class="pic-way" style="background-image: url(pic/content_izgotovlenie_metallokonstrukczij_1.jpg);" onclick="open_img('pic/content_izgotovlenie_metallokonstrukczij_1.jpg')"></div>
           <div class="text-way">Конструкции из металла</div>
         </div>
       </div>
   
       
     </div>
+
+    <div id="model">
+      <img id="model_imagine" src="" alt="изображение">
+    </div>
+
+    <script>
+      function open_img(path) {
+        var model = document.getElementById('model');
+        var model_imagine = document.getElementById('model_imagine');
+        model_imagine.src = path;
+        model.style.display = 'flex';
+      }
+
+      window.onclick = function(event) {
+        var model = document.getElementById('model');
+        if(event.target === model) {
+          model.style.display = 'none';
+        }
+      }
+    </script>
 
 
 </body>
