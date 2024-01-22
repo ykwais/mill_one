@@ -376,15 +376,15 @@
 
     <div class="wrapper_categories">
       <div class="wrapper_buttons_for_category">
-        <button class="wrapper_button">Изготовление декораций</button>
+        <button class="wrapper_button" onclick="changePhotos('1')">Изготовление декораций</button>
         <!-- <button class="wrapper_button">Cтенды для выставок</button> -->
         <!-- <button class="wrapper_button">Наружная реклама</button> -->
-        <button class="wrapper_button">Декоративные элементы для интерьера</button>
+        <button class="wrapper_button" onclick="changePhotos('2')">Декоративные элементы для интерьера</button>
         <!-- <button class="wrapper_button">Фрезеровка и гравировка на ЧПУ станке</button> -->
-        <button class="wrapper_button">Конструкции из металла</button>
+        <button class="wrapper_button" onclick="changePhotos('3')">Конструкции из металла</button>
       </div>
 
-      <div class="wrapper-pic-ways">
+      <div class="wrapper-pic-ways" id="photoGallery">
       
         <div class="group-way">
           
@@ -439,6 +439,43 @@
           model.style.display = 'none';
         }
       }
+    </script>
+
+    <script>
+      var photoData = {
+        '1': ['pic/dekor_1.jpg', 'pic/decor_2.jpg', 'pic/decor_3.jpg', 'pic/decor_4.jpg', 'pic/decor_5re.jpg', 'pic/decor_6.jpg'],
+        '2': ['pic/in_1.jpg', 'pic/in_2.jpg', 'pic/in_3.jpg', 'pic/in_4.jpg', 'pic/in_5.jpg', 'pic/in_6.jpg'],
+        '3': ['pic/metal_1.jpg', 'pic/metal_2.jpg', 'pic/metal_3.jpg', 'pic/metal_4.jpg', 'pic/metal_5.jpg', 'pic/metal_6.jpg']
+      };
+
+      function changePhotos(category) {
+        var gallery = document.getElementById('photoGallery');
+        var photos = photoData[category];
+
+  
+        gallery.innerHTML = '';
+
+  
+        for (var i = 0; i < photos.length; i++) {
+          var groupWay = document.createElement('div');
+          groupWay.className = 'group-way';
+
+          var picWay = document.createElement('div');
+          picWay.className = 'pic-way';
+          picWay.style.backgroundImage = 'url(' + photos[i] + ')';
+          picWay.setAttribute('onclick', 'open_img("' + photos[i] + '")');
+    
+          var textWay = document.createElement('div');
+          textWay.className = 'text-way';
+          textWay.textContent = '????????';
+
+          groupWay.appendChild(picWay);
+          groupWay.appendChild(textWay);
+          gallery.appendChild(groupWay);
+        }
+      }
+
+
     </script>
 
 
