@@ -6,7 +6,7 @@
     <link rel="icon" href="icons/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_for_expl.css">
     <title>Миллдом - интернет-магазин электрики</title>
     <meta name="description" content="Здесь вы можете найти все, что связано с щитовой электрикой."> 
 </head>
@@ -331,9 +331,12 @@
                       />000000000000000
               </symbol>
           </svg>
-                <svg class="logotype">
-                    <use xlink:href="#logo"></use>
-                </svg>
+          <a href="index.html">
+            <svg class="logotype">
+              <use xlink:href="#logo"></use>
+          </svg>
+          </a>
+                
 
                 
 
@@ -350,79 +353,49 @@
 
     <div class="line"></div>
 
-    <div class="wrapper-main-pic" style="background-image: url(pic/first_draw.jpg)">
-      <div class="wrapper_adv">
-        <div class="article">Монтаж металлоконструкций</div>
-        <div class="motivation">На рынке уже 20 лет!</div>
-      </div>
-        
-    </div>
-
+    <div class="name_way">Декоративные элементы для интерьера</div>
+    <div class="description_of_way">Описание раздела. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam vel dolor nulla atque soluta dolorum aliquam qui iure hic odit omnis odio dignissimos, reiciendis molestias earum consequuntur error aliquid expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quae provident sint voluptatum, molestiae eligendi dolor modi accusamus quasi tenetur asperiores corrupti cum expedita distinctio iusto ad, perspiciatis beatae ullam. Ниже вы увидете пример наших работ.</div>
     <div class="line"></div>
 
-    <div class="char_company">
-      Компания "Миллдом" вот уже 20 лет занимается подбором, подготовкой, установкой и обслуживанием разного рода электрических установок. Вы смело можете расчитывать на качественный и профессиональный сервис от нас.
-    </div>
-
-    <div class="line"></div>
     <div class="wrapper-pic-ways">
-
-      <a href="peregorodki.html" target="_blank">
-        <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/arki.-foto-15.jpg);"></div>
-          <div class="text-way">Перегородки</div>
-        </div>
-      </a>
       
-      <a href="make_decoration.html" target="_blank">
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/dec_1.jpg);"></div>
-          <div class="text-way">Изготовление декораций</div>
+            <div class="pic-way" style="background-image: url(pic/in_1.jpg);" onclick="open_img('pic/in_1.jpg')"></div>
+            <div class="text-way">????????</div>
         </div>
-      </a>
-      
-
-      <a href="stands.html" target="_blank">
+    
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/penza-1.jpg);"></div>
-          <div class="text-way">Cтенды для выставок</div>
+            <div class="pic-way" style="background-image: url(pic/in_2.jpg);" onclick="open_img('pic/in_2.jpg')"></div>
+            <div class="text-way">????????</div>
         </div>
-      </a>
-      
-
-      <a href="dekor_elems.html" target="_blank">
+    
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/dekor.jpg);"></div>
-          <div class="text-way">Декоративные элементы для интерьера</div>
+            <div class="pic-way" style="background-image: url(pic/in_3.jpg);" onclick="open_img('pic/in_3.jpg')"></div>
+            <div class="text-way">Подпись</div>
         </div>
-      </a>
-      
-
-      <a href="freza_chpu.html" target="_blank">
+    
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/frezernye-raboty.jpg);"></div>
-          <div class="text-way">Фрезеровка и гравировка на ЧПУ станке</div>
+            <div class="pic-way" style="background-image: url(pic/in_4.jpg);" onclick="open_img('pic/in_4.jpg')"></div>
+            <div class="text-way">????????</div>
         </div>
-      </a>
-      
-
-      <a href="constructions_metal.html" target="_blank">
+    
         <div class="group-way">
-          <div class="pic-way" style="background-image: url(pic/content_izgotovlenie_metallokonstrukczij_1.jpg);"></div>
-          <div class="text-way">Конструкции из металла</div>
+            <div class="pic-way" style="background-image: url(pic/in_5.jpg);" onclick="open_img('pic/in_5.jpg')"></div>
+            <div class="text-way">размер подписи вот такой еще можно и еше</div>
         </div>
-      </a>
-      
+    
+        <div class="group-way">
+            <div class="pic-way" style="background-image: url(pic/in_6.jpg);" onclick="open_img('pic/in_6.jpg')"></div>
+            <div class="text-way">????????</div>
+        </div>
     </div>
 
     <div class="line"></div>
 
-
-
-    
 
     <div id="model">
       <img id="model_imagine" src="" alt="изображение">
+      <div class="zoom-loupe" id="zoomLoupe"></div>
     </div>
 
     <script>
@@ -441,7 +414,53 @@
       }
     </script>
 
+
+
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var model = document.getElementById('model');
+      var model_imagine = document.getElementById('model_imagine');
+      var loupe = document.getElementById('zoomLoupe');
+  
+      model_imagine.onload = function() {
+        model_imagine.addEventListener("mousemove", function(e) {
+          var rect = model_imagine.getBoundingClientRect();
+          var mouseX = e.clientX - rect.left;
+          var mouseY = e.clientY - rect.top;
+  
+          var imageX = (mouseX / model_imagine.offsetWidth) * 100;
+          var imageY = (mouseY / model_imagine.offsetHeight) * 100;
+  
+          loupe.style.display = "block";
+          loupe.style.left = mouseX - loupe.offsetWidth / 2 + 140 + "px";
+          loupe.style.top = mouseY - loupe.offsetHeight / 2 + "px";
+  
+          loupe.style.backgroundImage = "url('" + model_imagine.src + "')";
+          loupe.style.backgroundPosition = imageX + "% " + imageY + "%";
+        });
+      };
+
+      model_imagine.addEventListener("mouseleave", function() {
+        loupe.style.display = "none";
+      });
+  
+      function open_img(path) {
+        model_imagine.src = path;
+        model.style.display = 'flex';
+      }
+  
+      window.onclick = function(event) {
+        if(event.target === model) {
+          model.style.display = 'none';
+        }
+      };
+    });
+</script>
+
     
+
 
 </body>
 </html>
