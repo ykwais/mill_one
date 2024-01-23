@@ -63,62 +63,18 @@ body {
     margin-bottom: 40px;
 }
 
-.wrapper-main-pic{
-    width: 1200px;
-    height: 350px;
-    /* background-image: url(../pic/sigmund-_dJCBtdUu74-unsplash.jpg); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: center;
-    margin-bottom: 50px;
-    
-}
-
-.wrapper_adv {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    height: fit-content;
-    /* border: 1px solid white; */
-    padding-right: 60px;
-    padding-top: 40px;
-}
-
-.article{
-    font-size: 60px;
-    color: rgb(255, 255, 255);
-    /* padding-left: 40px;
-    padding-right: 40px; */
-}
-
-.motivation {
-    font-size: 52px;
-    color: aliceblue;
-    
-
-}
-
-.char_company {
-    width: 1000px;
-    height: fit-content;
-    font-size: 24px;
+.name_way {
+    font-size: 32px;
     margin-bottom: 30px;
 }
 
-.ways {
-    width: 1000px;
-    height: fit-content;
-    font-size: 32px;
-    padding-left: 140px;
-    margin-bottom: 90px;
+.description_of_way {
+    font-size: 24px;
+    width: 1340px;
+    margin-bottom: 30px;
+
 }
+
 
 .wrapper-pic-ways {
     width: 1180px;
@@ -164,66 +120,17 @@ body {
 
 .pic-way:hover {
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 
 
 .text-way {
     font-size: 24px;
-}
-
-.what_are_doing{
-    font-size: 32px;
-    margin-bottom: 20px;
+    max-width: 530px;
 }
 
 
-.wrapper_categories {
-    display: flex;
-    flex-direction: column;
-    width: 1350px;
-    height: fit-content;
-    /* border: 1px solid black; */
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrapper_buttons_for_category {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /* border: 1px solid black; */
-    margin-bottom: 40px;
-    width: 1350px;
-}
-
-.wrapper_button {
-    width: 300px;
-    height: 100px;
-    font-size: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    border: 0px;
-    background-color: white;
-    border-radius: 15px;
-}
-
-button:hover {
-    background-color: #37a6de;
-    color: white;
-}
-
-button:active {
-    background-color: white;
-    color: black;
-}
 
 #model{
     display: none;
