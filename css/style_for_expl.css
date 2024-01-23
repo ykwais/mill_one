@@ -147,4 +147,21 @@ body {
 #model_imagine{
     max-width: 100%;
     max-height: 100%;
+    cursor: crosshair;
+    /* position: relative;
+    background-size: 200% 200%;
+    overflow: hidden; */
 }
+
+.zoom-loupe {
+    position: absolute;
+    width: 250px; /* Задайте размер лупы по вашему усмотрению */
+    height: 250px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-size: 500% 500%;
+    background-repeat: no-repeat;
+    /* background-position: 50% 50%; */
+    display: none;
+    /* transform: translate(-50%, -50%); */
+  }

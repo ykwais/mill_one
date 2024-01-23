@@ -350,14 +350,13 @@
 
     <div class="line"></div>
 
-    <div class="name_way">Перегородки</div>
+    <div class="name_way">Шаблон</div>
     <div class="description_of_way">Описание раздела. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam vel dolor nulla atque soluta dolorum aliquam qui iure hic odit omnis odio dignissimos, reiciendis molestias earum consequuntur error aliquid expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quae provident sint voluptatum, molestiae eligendi dolor modi accusamus quasi tenetur asperiores corrupti cum expedita distinctio iusto ad, perspiciatis beatae ullam. Ниже вы увидете пример наших работ.</div>
     <div class="line"></div>
 
     <div class="wrapper-pic-ways">
       
         <div class="group-way">
-          
             <div class="pic-way" style="background-image: url(pic/metal_1.jpg);" onclick="open_img('pic/metal_1.jpg')"></div>
             <div class="text-way">????????</div>
         </div>
@@ -393,6 +392,7 @@
 
     <div id="model">
       <img id="model_imagine" src="" alt="изображение">
+      <div class="zoom-loupe" id="zoomLoupe"></div>
     </div>
 
     <script>
@@ -410,6 +410,51 @@
         }
       }
     </script>
+
+
+
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var model = document.getElementById('model');
+      var model_imagine = document.getElementById('model_imagine');
+      var loupe = document.getElementById('zoomLoupe');
+  
+      model_imagine.onload = function() {
+        model_imagine.addEventListener("mousemove", function(e) {
+          var rect = model_imagine.getBoundingClientRect();
+          var mouseX = e.clientX - rect.left;
+          var mouseY = e.clientY - rect.top;
+  
+          var imageX = (mouseX / model_imagine.offsetWidth) * 100;
+          var imageY = (mouseY / model_imagine.offsetHeight) * 100;
+  
+          loupe.style.display = "block";
+          loupe.style.left = mouseX - loupe.offsetWidth / 2 + 140 + "px";
+          loupe.style.top = mouseY - loupe.offsetHeight / 2 + "px";
+  
+          loupe.style.backgroundImage = "url('" + model_imagine.src + "')";
+          loupe.style.backgroundPosition = imageX + "% " + imageY + "%";
+        });
+      };
+
+      model_imagine.addEventListener("mouseleave", function() {
+        loupe.style.display = "none";
+      });
+  
+      function open_img(path) {
+        model_imagine.src = path;
+        model.style.display = 'flex';
+      }
+  
+      window.onclick = function(event) {
+        if(event.target === model) {
+          model.style.display = 'none';
+        }
+      };
+    });
+</script>
 
     
 
